@@ -67,7 +67,7 @@ static struct Thread {
 
 #endif
 
-void add(int &value, const int &length) {
+void addNumbers(int &value, const int &length) {
 
     int val = value;
 
@@ -83,7 +83,7 @@ int main() {
 
     int value = 0;
 
-    std::thread myThread_(add, std::ref(value), std::cref(value));
+    std::thread myThread_(addNumbers, std::ref(value), std::cref(value));
 
     //myThread_.detach();
     myThread_.join();
